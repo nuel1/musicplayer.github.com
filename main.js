@@ -13,7 +13,6 @@ const bigCover_playlist = document.querySelector(".cover--js");
 const counterBox = document.querySelector("#counter");
 const sideBar = document.querySelector(".side-bar-slide--js");
 const page_container = document.querySelector(".main");
-// const
 let markedSongs = 0;
 
 const hp = new (function () {
@@ -91,6 +90,7 @@ class Player {
   }
   nextTrack() {
     const curr_track = audio.getAttribute("src");
+    if(!curr_track) return;
     let n;
     songs.forEach((obj) => obj.src === curr_track && (n = songs.indexOf(obj)));
     n++;
@@ -107,6 +107,7 @@ class Player {
   }
   previousTrack() {
     const curr_track = audio.getAttribute("src");
+    if(!curr_track) return;
     let n;
     songs.forEach((obj) => obj.src === curr_track && (n = songs.indexOf(obj)));
     n--;
@@ -1889,7 +1890,7 @@ function highlightPlayed() {
   const songPlates = document.querySelectorAll(".song-list li");
   const currPlayed = document.querySelector(".song-name");
   const songTitleList = [];
-  songTitleList.push(
+  songTitleList.push( 
     ...(function (a) {
       songTitles.forEach((t) => {
         a.push(t.textContent);
@@ -1906,4 +1907,5 @@ function highlightPlayed() {
     }
   });
 }
+
 setInterval(highlightPlayed, 0);
