@@ -23,8 +23,8 @@ based music player to meet the demands of many internet users.
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://github.com/nuel1/musicplayer.github.com
+- Live Site URL: https://brave-brattain-094318.netlify.app/
 
 ## My process
 
